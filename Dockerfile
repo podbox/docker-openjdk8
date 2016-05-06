@@ -12,11 +12,11 @@ RUN apt-get -qq update          \
  && rm -fR /tmp/*
 
 # ------------------------------------------------------------------------ java8
-ENV ZULU_VERSION 13.0.5-jdk8.0.72
+ENV ZULU_VERSION 8.15.0.1-jdk8.0.92
 RUN mkdir -p /usr/lib/jvm \
  && cd /usr/lib/jvm \
- && curl https://cdn.azul.com/zulu/bin/zulu8.$ZULU_VERSION-linux_x64.tar.gz | gunzip -c | tar x \
- && cd zulu8.$ZULU_VERSION-linux_x64 \
+ && curl https://cdn.azul.com/zulu/bin/zulu$ZULU_VERSION-linux_x64.tar.gz | gunzip -c | tar x \
+ && cd zulu$ZULU_VERSION-linux_x64 \
  && rm -fR src.zip demo sample
 
 ENV JAVA_HOME /usr/lib/jvm/zulu8.$ZULU_VERSION-linux_x64
