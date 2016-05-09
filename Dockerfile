@@ -25,7 +25,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 # --------------------------------------------------------------------- tcnative
 ENV APR_VERSION 1.5.2
-ENV TCNATIVE_VERSION 1.2.6
+ENV TCNATIVE_VERSION 1.2.7
 
 RUN apt-get -qq update \
  && apt-get -qq install -y build-essential libssl-dev libpcre++-dev zlib1g-dev \
